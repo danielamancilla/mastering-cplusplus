@@ -32,3 +32,8 @@
 *.exe
 *.out
 *.app
+
+# Not source files
+!*.cxx
+!*.c
+!*.cpp

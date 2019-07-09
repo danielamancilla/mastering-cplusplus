@@ -1,3 +1,16 @@
+/**
+ * @file    callback.cxx
+ * @author  Daniela Mancilla (danielamancillav@gmail.com)
+ * @brief   Callback designed as a function pointer (pointer to function)
+ *          This small program encrypts a message depending on the encrypter
+ *          function called (callback) by BuildEncryptedMessage()
+ * 
+ * @version 0.1
+ * @date    2019-07-09
+ * 
+ * @copyright Copyright (c) 2019
+ * 
+ */
 #include <iostream>
 #include <string>
 
@@ -19,6 +32,13 @@ std::string EncryptByLetterDecrement(std::string raw)
     return raw;
 }
 
+/**
+ * @brief Function that calls back encryption
+ * 
+ * @param raw 
+ * @param encrypterFunc 
+ * @return std::string 
+ */
 std::string BuildEncryptedMessage(std::string raw, std::string (*encrypterFunc)(std::string))
 {
     std::string encrypted = encrypterFunc(raw);
