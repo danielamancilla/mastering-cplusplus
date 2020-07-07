@@ -32,7 +32,7 @@ inline T Squaring(const T n) { return n * n;  }
  * @param v     the vector to be printed out
  */
 template <typename T>
-inline void PrintVector(std::vector<T> v) {
+void PrintVector(std::vector<T> v) {
     typename std::vector<T>::iterator it = v.begin();
     for (; it != v.end(); ++it)
         std::cout << *it << " ";
